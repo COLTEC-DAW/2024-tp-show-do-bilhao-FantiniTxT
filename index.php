@@ -29,42 +29,37 @@
         <h1>Show do Bilhão</h1>
 
         <?php
-        $perguntas = array();
-        array_push($perguntas, "Em qual reino se encontram as bactérias?");
-        array_push($perguntas, "Quantos países tem na América do Sul?");
-        array_push($perguntas, "Qual é um exemplo de reação endotérmica?");
-        array_push($perguntas, "Qual dos seguintes verbos é transitivo:");
-        array_push($perguntas, "Qual a raiz quadrada de 289?");
+            $perguntas = array();
+            array_push($perguntas, "Em qual reino se encontram as bactérias?");
+            array_push($perguntas, "Quantos países tem na América do Sul?");
+            array_push($perguntas, "Qual é um exemplo de reação endotérmica?");
+            array_push($perguntas, "Qual dos seguintes verbos é transitivo:");
+            array_push($perguntas, "Qual a raiz quadrada de 289?");
 
-        $alternativas = array();
-        for ($i = 0; $i < sizeof($perguntas); $i++){
-            array_push($alternativas, array());
-        }
-
-        array_push($alternativas[0], "Vegetal", "Protista", "Monera", "Fungi");
-    
-        array_push($alternativas[1], "11 países", "12 países", "13 países", "14 países");
-
-        array_push($alternativas[2], "queima de uma vela", "condensação da água", "dissolução de cloreto de cálcio na água", "cozimento de alimentos");
-
-        array_push($alternativas[3], "dormir", "beber", "precisar", "usar");
-
-        array_push($alternativas[4], "16", "17", "18", "19");
-
-        $respostas = array(2, 2, 3, 0, 1);
-
-        for($i = 0; $i < sizeof($perguntas); $i++){
-            $num = $i + 1;
-            echo "<h2> PERGUNTA $num<h2>";
-            echo "<h2>$perguntas[$i]<h2>";
-
-            $num = 1;
-            foreach ($alternativas[$i] as $alternativa) {
-                echo "<p> [$num] $alternativa<p>";
-                $num++;
+            $alternativas = array();
+            for ($i = 0; $i < sizeof($perguntas); $i++){
+                array_push($alternativas, array());
             }
-            echo "<br>";
-        }
+            array_push($alternativas[0], "Vegetal", "Protista", "Monera", "Fungi");
+            array_push($alternativas[1], "11 países", "12 países", "13 países", "14 países");
+            array_push($alternativas[2], "queima de uma vela", "condensação da água", "dissolução de cloreto de cálcio na água", "cozimento de alimentos");
+            array_push($alternativas[3], "dormir", "beber", "precisar", "usar");
+            array_push($alternativas[4], "16", "17", "18", "19");
+
+            $respostas = array(2, 2, 3, 0, 1);
+
+            for($i = 0; $i < sizeof($perguntas); $i++){
+                $num = $i + 1;
+                echo "<h2> PERGUNTA $num<h2>";
+                echo "<h2>$perguntas[$i]<h2>";
+
+                $num = 1;
+                foreach ($alternativas[$i] as $alternativa) {
+                    echo "<p> [$num] $alternativa<p>";
+                    $num++;
+                }
+                echo "<br>";
+            }
         ?>
     </div>
 </body>
